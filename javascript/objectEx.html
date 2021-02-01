@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="colors.js">
+
+    </script>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <input type="button" value="night" onclick="nightDayHandeler(this)">
+    <h2>Create</h2>
+    <script>
+      //<input type="button" value="night" onclick="nightDayHandeler(this)">
+
+
+      var coworkers={
+        "programmer":"egoing",
+        "designer":"leezche"
+
+      }
+      document.write("programmer:" +coworkers.programmer +"<br>");
+      document.write("designer:" +coworkers.designer +"<br>");
+
+      coworkers.bookkeeper="duru";
+      document.write("bookkeeper:" +coworkers.bookkeeper +"<br>");
+      coworkers["data scientist"]="taeho";
+      document.write("Data Scientist:" +coworkers["data scientist"] +"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworkers)
+      {
+        document.write(key+":"+coworkers[key]+"<br>");
+      }
+    </script>
+    <h2>properties & Method</h2>
+    <script>
+      coworkers.showAll=function(){
+        for(var key in this)
+        {
+          document.write(key+" : "+this[key]+"<br>");
+        }
+      }
+      coworkers.printProgrammer=function()
+      {
+        for(var key in this)
+        {
+          if(key==="programmer")
+          {
+            document.write(key+" : "+this[key]);
+          }
+          else {
+            ;
+          }
+        }
+      }
+
+
+      coworkers.showAll();
+      document.write("<br><br><br>");
+
+    </script>
+
+
+    <h2>Country</h2>
+    <script>
+    var countries={
+      "asia":"korea"
+    }
+    countries.europe="england";
+
+    for(var key in countries)
+    {
+      document.write(key+"   :   "+countries[key]+"<br>");
+    }
+
+    </script>
+  </body>
+</html>
