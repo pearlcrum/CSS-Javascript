@@ -1,0 +1,18 @@
+p::before{
+  color:red;
+  content: "before 가상 요소를 활용한 내용";
+}
+p::after{
+  color:blue;
+  content: "after 가상 요소를 활용한 내용";
+}
+/*p {
+  color: gray;
+}
+
+
+.foo{color: purple;}
+.bar{text-decoration: underline;}
+.foo.bar {border: 1px solid;}
+#id-selector{font-size: 30px};
+*/
